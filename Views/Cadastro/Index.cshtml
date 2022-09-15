@@ -1,0 +1,563 @@
+﻿@model IEnumerable<FormCadastro.Models.TB_CADASTRO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NRO_INSCRICAO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATA_INSCRICAO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NASC_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EST_CIVIL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEXO_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NATURAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NESC_ESP_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NESC_ESP_TIT_DESCRICAO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_MAE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ENDERECO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ENDERECO_NRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ENDERECO_COMP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BAIRRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MUNICIPIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONE_RES)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONE_CEL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMPRESA_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROF_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RENDA_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.END_COMERCIAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NRO_COMERCIAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BAIRRO_COMERCIAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP_COMERCIAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MUNI_COMERCIAL_TIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NASC_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EST_CIVIL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEXO_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NATURAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NESC_ESP_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NESC_ESP_CON_DESCRICAO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMPRESA_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROF_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RENDA_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.END_COMERCIAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NRO_COMERCIAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BAIRRO_COMERCIAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP_COMERCIAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MUNI_COMERCIAL_CON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP1_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP1_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP1_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP1_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP2_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP2_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP2_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP2_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP3_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP3_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP3_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP3_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP4_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP4_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP4_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP4_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP5_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP5_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP5_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP5_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP6_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP6_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP6_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP6_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP7_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP7_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP7_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP7_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP8_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP8_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP8_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP8_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP9_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP9_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP9_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP9_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP10_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP10_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP10_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP10_RENDA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP11_NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP11_PAREN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP11_NASC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DEP11_RENDA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NRO_INSCRICAO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATA_INSCRICAO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NASC_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EST_CIVIL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEXO_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NATURAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NESC_ESP_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NESC_ESP_TIT_DESCRICAO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_MAE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENDERECO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENDERECO_NRO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENDERECO_COMP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BAIRRO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUNICIPIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TELEFONE_RES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TELEFONE_CEL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMPRESA_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROF_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RENDA_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.END_COMERCIAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NRO_COMERCIAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BAIRRO_COMERCIAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP_COMERCIAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUNI_COMERCIAL_TIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NASC_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EST_CIVIL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEXO_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NATURAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NESC_ESP_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NESC_ESP_CON_DESCRICAO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMPRESA_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROF_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RENDA_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.END_COMERCIAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NRO_COMERCIAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BAIRRO_COMERCIAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP_COMERCIAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MUNI_COMERCIAL_CON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP1_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP1_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP1_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP1_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP2_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP2_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP2_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP2_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP3_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP3_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP3_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP3_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP4_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP4_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP4_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP4_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP5_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP5_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP5_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP5_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP6_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP6_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP6_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP6_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP7_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP7_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP7_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP7_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP8_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP8_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP8_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP8_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP9_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP9_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP9_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP9_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP10_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP10_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP10_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP10_RENDA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP11_NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP11_PAREN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP11_NASC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEP11_RENDA)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_REGISTRO">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_REGISTRO">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_REGISTRO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
