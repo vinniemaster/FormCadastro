@@ -25,10 +25,8 @@ namespace FormCadastro.Models
         public char SEXO_TIT { get; set; }
         [DisplayName("Naturalidade")]
         public string NATURAL_TIT { get; set; }
-        [DisplayName("Necessidade especial?")]
-        public bool NESC_ESP_TIT { get; set; }
         [DisplayName("Descreva:")]
-        public string NESC_ESP_TIT_DESCRICAO { get; set; }
+        public string? NESC_ESP_TIT_DESCRICAO { get; set; }
         [DisplayName("Nome da Mãe")]
         public string NOME_MAE { get; set; }
         [DisplayName("Endereço")]
@@ -77,11 +75,9 @@ namespace FormCadastro.Models
         public char? SEXO_CON { get; set; }
         [DisplayName("Naturalidade")]
         public string? NATURAL_CON { get; set; }
-        [DisplayName("Necessidade especial?")]
-        public bool? NESC_ESP_CON { get; set; }
         [DisplayName("Descreva:")]
         public string? NESC_ESP_CON_DESCRICAO { get; set; }
-        [DisplayName("Nome da EmpresaN")]
+        [DisplayName("Nome da Empresa")]
         public string? EMPRESA_CON { get; set; }
         [DisplayName("Profissão")]
         public string? PROF_CON { get; set; }

@@ -255,11 +255,10 @@ namespace FormCadastro.Migrations
                     b.Property<string>("NESC_ESP_CON_DESCRICAO")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("NESC_ESP_TIT")
+                    b.Property<bool?>("NESC_ESP_TIT")
                         .HasColumnType("bit");
 
                     b.Property<string>("NESC_ESP_TIT_DESCRICAO")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NOME_CON")
