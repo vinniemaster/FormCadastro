@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FormCadastro.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20220915221244_FSTMIGRATION")]
-    partial class FSTMIGRATION
+    [Migration("20230419181804_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -238,11 +238,12 @@ namespace FormCadastro.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("NASC_CON")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("NASC_CON")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("NASC_TIT")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("NASC_TIT")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NATURAL_CON")
                         .HasColumnType("nvarchar(max)");
@@ -251,14 +252,8 @@ namespace FormCadastro.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("NESC_ESP_CON")
-                        .HasColumnType("bit");
-
                     b.Property<string>("NESC_ESP_CON_DESCRICAO")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("NESC_ESP_TIT")
-                        .HasColumnType("bit");
 
                     b.Property<string>("NESC_ESP_TIT_DESCRICAO")
                         .HasColumnType("nvarchar(max)");

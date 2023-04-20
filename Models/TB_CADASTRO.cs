@@ -14,7 +14,7 @@ namespace FormCadastro.Models
         [DisplayName("Nome")]
         public string NOME_TIT { get; set; }
         [DisplayName("Data de Nascimento")]
-        public DateTime NASC_TIT { get; set; }
+        public string NASC_TIT { get; set; }
         [DisplayName("RG")]
         public string RG_TIT { get; set; }
         [DisplayName("CPF")]
@@ -64,7 +64,7 @@ namespace FormCadastro.Models
         [DisplayName("Nome")]
         public string? NOME_CON { get; set; }
         [DisplayName("Data de Nascimento")]
-        public DateTime? NASC_CON { get; set; }
+        public string? NASC_CON { get; set; }
         [DisplayName("RG")]
         public string? RG_CON { get; set; }
         [DisplayName("CPF")]

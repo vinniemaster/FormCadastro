@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="Views\Shared\Error - Cópia.cshtml" />
+    <Content Remove="Views\Shared\_Layout - Cópia.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\_Layout - Cópia.cshtml.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,10 +28,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

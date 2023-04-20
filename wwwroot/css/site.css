@@ -42,3 +42,37 @@ body {
         opacity: 1;
     }
 }
+.sidebar {
+    display: block;
+    position: fixed;
+    height: 1000px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 250px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 90%;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+    animation: showMe .75s forwards;
+}
+
+    .input-group > .form-control,
+    .input-group-append > .btn {
+        flex: 1 1 auto;
+    }
+
+.input-group-append {
+    margin-left: -1px;
+}
+
+    .input-group-append > .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }

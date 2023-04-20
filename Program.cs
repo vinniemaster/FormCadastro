@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<BancoContext>
-    (options => options.UseSqlServer("Data Source=DESKTOP-VR713UM;User ID=sa;Password=123456789; Initial Catalog=FORMCADASTRO;"));
+    (options => options.UseSqlServer("Data Source=SATAN-DESKTOP\\SQLEXPRESS;User ID=sa;Password=123456789;MultipleActiveResultSets=True; Initial Catalog=FormCadastro;Trust Server Certificate=true"));
 
 
 var app = builder.Build();

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FormCadastro.Migrations
 {
-    public partial class FSTMIGRATION : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,13 +17,12 @@ namespace FormCadastro.Migrations
                     NRO_INSCRICAO = table.Column<int>(type: "int", nullable: false),
                     DATA_INSCRICAO = table.Column<DateTime>(type: "datetime2", nullable: false),
                     NOME_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NASC_TIT = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    NASC_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RG_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CPF_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EST_CIVIL_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SEXO_TIT = table.Column<string>(type: "nvarchar(1)", nullable: false),
                     NATURAL_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NESC_ESP_TIT = table.Column<bool>(type: "bit", nullable: true),
                     NESC_ESP_TIT_DESCRICAO = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NOME_MAE = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ENDERECO = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -43,13 +42,12 @@ namespace FormCadastro.Migrations
                     CEP_COMERCIAL_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MUNI_COMERCIAL_TIT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NOME_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NASC_CON = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    NASC_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RG_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CPF_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EST_CIVIL_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SEXO_CON = table.Column<string>(type: "nvarchar(1)", nullable: true),
                     NATURAL_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NESC_ESP_CON = table.Column<bool>(type: "bit", nullable: true),
                     NESC_ESP_CON_DESCRICAO = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EMPRESA_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PROF_CON = table.Column<string>(type: "nvarchar(max)", nullable: true),

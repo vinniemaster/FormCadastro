@@ -538,6 +538,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="ID_REGISTRO" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <button onclick="location.href='@Url.Action("Index","Cadastro")'" type="button" class="btn btn-primary">Voltar</button>
     </form>
 </div>
