@@ -66,9 +66,21 @@ body {
         border-bottom-left-radius: 0;
     }
 
+.button-group {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.button-group button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+}
+
 .no-border {
     padding: 0;
     border: none;
     background: none;
-    font-size: 30px;
 }
