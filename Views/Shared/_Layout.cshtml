@@ -7,29 +7,63 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FormCadastro.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        .modal{
+            width: 300px;
+        }
+        .modal-content{
+            width: 300px;
+        }
+        .list-group-item:link{
+            text-decoration: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:link {
+            text-decoration: none;
+            color:black;
+        }
+        a:hover {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 sidebar">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-0 h1" asp-area="" asp-controller="Home" asp-action="Index">FormCadastro</a>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="Create">Novo</a>
-                        </li>
-                    </ul>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><a class="sidebar-title" asp-area="" asp-controller="Home" asp-action="Index">FormCadastro</a></h5>
+                        <button type="button" class="no-border" clss data-bs-dismiss="modal"><i class='bx bx-x'></i></button>
+                    </div>
+                    <div class="modal-body">                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastros</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a asp-area="" asp-controller="Cadastro" asp-action="Create">Novo</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+
         <nav class="navbar navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
             <div class="container-fluid">
+                <button type="button" class="navbar-toggler" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"> </a>

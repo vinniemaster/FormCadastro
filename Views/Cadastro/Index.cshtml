@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Cadastros";
 }
-
+<div class="container-fluid">
 <h1>Cadastros</h1>
 
 <p>
@@ -85,11 +85,14 @@
                 @Html.DisplayFor(modelItem => item.PROF_TIT)
             </td>
             <td>
-                <button asp-route-id="@item.ID_REGISTRO" onclick="location.href='Cadastro/Edit/@item.ID_REGISTRO'" type="button" class="btn btn-primary">Editar</button>
-                <button asp-route-id="@item.ID_REGISTRO" onclick="location.href='Cadastro/Details/@item.ID_REGISTRO'" type="button" class="btn btn-warning">Detalhes</button>
-                <button asp-route-id="@item.ID_REGISTRO" onclick="location.href='Cadastro/Delete/@item.ID_REGISTRO'" type="button" class="btn btn-danger">Deletar</button>
+                <div class="input-group">
+                    <button asp-route-id="@item.ID_REGISTRO" class="no-border" onclick="location.href='Cadastro/Edit/@item.ID_REGISTRO'" type="button" class="btn btn-primary"><i class='bx bx-pencil'></i></button>
+                    <button asp-route-id="@item.ID_REGISTRO" class="no-border" onclick="location.href='Cadastro/Details/@item.ID_REGISTRO'" type="button" class="btn btn-warning"><i class='bx bx-list-ul'></i></button>
+                    <button asp-route-id="@item.ID_REGISTRO" class="no-border" onclick="location.href='Cadastro/Delete/@item.ID_REGISTRO'" type="button" class="btn btn-danger"><i class='bx bx-trash-alt'></i></button>
+                </div>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>

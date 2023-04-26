@@ -42,22 +42,11 @@ body {
         opacity: 1;
     }
 }
-.sidebar {
-    display: block;
-    position: fixed;
-    height: 1000px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    width: 250px;
-}
-
 .input-group {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     vertical-align: bottom;
     animation: showMe .75s forwards;
@@ -76,3 +65,10 @@ body {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
+
+.no-border {
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 30px;
+}
